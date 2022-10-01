@@ -18,8 +18,9 @@ OS ?= linux
 ARCH ?= amd64
 
 # build without using the network
-export GOPROXY := off
-export GOFLAGS := -mod=vendor
+# export GOPROXY := off
+# export GOFLAGS := -mod=vendor
+export GOFLAGS := -mod=readonly
 
 .PHONY: all
 all: package-deb package-rpm
